@@ -9,10 +9,9 @@ nav{
 }
 
 .wrapper{
-	margin-right: auto;
-	margin-left: auto;
+	margin: 0 auto;
 
-	max-width: 960px;
+	width: 95%;
 }	
 
 .footer{
@@ -24,3 +23,24 @@ nav{
 	color: white;
 	text-align: center;
 }	
+
+.signup-form{
+	margin: auto;
+	width: 200px;
+	left: 0;
+	bottom: 0;
+}
+.signup-form-form{
+	text-align: center;
+	display: inline-block;
+}
+
+input{
+	margin: 3px 0px 3px 0px;
+}
+
+button{
+	margin: 10px 0px 10px 0px;
+	width: 100%;
+	padding: 3px 0px 3px 0px;
+}

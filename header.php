@@ -7,12 +7,14 @@
     </head>
     <body>
         <nav>
-		<div class="wrapper">
-			<ul>
-				<li><a href="index.php">HOME</a></li>
-			</ul>		
-		</div>
-	</nav>
+			<div class="wrapper">
+				<ul>
+					<li><a href="index.php">HOME</a></li>
+					<li><a href="signup.php">SIGNUP</a></li>
+					<li><a href="login.php">LOGIN</a></li>
+				</ul>		
+			</div>
+		</nav>
 
 	<div class="wrapper">
 
