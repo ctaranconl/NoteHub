@@ -4,7 +4,7 @@
         
 	<section class="signup-form">
 		<h2>Regístrate</h2>
-		<form action="signup.inc.php" class="signup-form-form" method="post">
+		<form action="includes/signup.inc.php" class="signup-form-form" method="post">
 			<input type="text" name="username" placeholder="Nombre de usuario">
 			<input type="text" name="email" placeholder="Email">
 			<input type="password" name="pwd" placeholder="Contraseña">
