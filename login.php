@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <script type="text/javascript">
-    alert('GeeksforGeeks!');
-</script>
-    <body>
+<?php
+	include_once 'header.php';
+?>
         Hi <?php $n = htmlspecialchars($_POST['name']); echo $n;?>.
         You are <?php echo (int)$_POST['age']; ?> years old.
 
@@ -24,3 +17,7 @@
             echo "No me hables más.";
         endif;
     }
+?>
+<?php
+	include_once 'footer.php';
+?>
