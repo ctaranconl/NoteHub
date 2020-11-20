@@ -4,7 +4,7 @@ function emptyInputSignup($username, $email, $pwd, $pwdRepeat){
 	
 	$result;
 	
-	if(empty($username) || empty($email) || empty(pwdRepeat) || empty($pwdRepeat)){
+	if(empty($username) || empty($email) || empty($pwd) || empty($pwdRepeat)){
 		$result = true;
 	}
 	else{
@@ -56,7 +56,7 @@ function usernameExists($conn, $username, $email){
 	
 	$sql = "SELECT * FROM users WHERE userID = ? OR email = ?;";
 	$stmt = mysqli_stmt_init($conn);
-	
+		
 	if(!mysqli_stmt_prepare($stmt, $sql)){
 		header("location: ../signup.php?error=stmtfailed");
 		exit();
@@ -81,8 +81,10 @@ function usernameExists($conn, $username, $email){
 
 function createUser($conn, $username, $email, $pwd){
 	
-	$sql = "INSERT INTO users (username, email, pwd) VALUES (?, ?, ?, ?);";
+	$sql = "INSERT INTO users (username, email, pwd) VALUES (?, ?, ?);";
 	$stmt = mysqli_stmt_init($conn);
+	echo("B");
+	
 	
 	if(!mysqli_stmt_prepare($stmt, $sql)){
 		header("location: ../signup.php?error=stmtfailed");

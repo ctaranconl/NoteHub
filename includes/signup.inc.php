@@ -40,11 +40,6 @@ if(isset($_POST["submit"])){
 	
 }
 
-function errorHandlers()
-{
-	
-}
-
 
 
 
