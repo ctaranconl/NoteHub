@@ -54,7 +54,7 @@ function pwdMatch($pwd, $pwdRepeat){
 
 function usernameExists($conn, $username, $email){
 	
-	$sql = "SELECT * FROM users WHERE userID = ? OR email = ?;";
+	$sql = "SELECT * FROM users WHERE username = ? OR email = ?;";
 	$stmt = mysqli_stmt_init($conn);
 		
 	if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -100,6 +100,63 @@ function createUser($conn, $username, $email, $pwd){
 	header("location: ../index.php?error=none");
 	exit();
 }
+
+function emptyInputLogin($username, $pwd){
+	$result;
+	
+	if(empty($username) || empty($pwd)){
+		$result = true;
+	}
+	else{
+		$result = false;
+	}	
+	return $result;
+}
+
+function login($conn, $username, $pwd){
+
+	$usernameExists = usernameExists($conn, $username, $username);
+	
+	if($usernameExists === false){
+		header("location: ../login.php?error=wronglogin");
+		exit();
+	}
+	
+	$pwdHashed = $usernameExists["pwd"];
+	$checkPwd = password_verify($pwd, $pwdHashed);
+	
+	if($checkPwd === false){
+		header("location: ../login.php?error=wronglogin");	
+		exit();
+	}
+	else if($checkPwd === true){
+		session_start();
+		$_SESSION["userid"]=$usernameExists["userID"];
+		header("location: ../index.php");
+		exit();
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,8 +1,11 @@
+p{
+	color: red;
+}
+
 nav{
 	margin-right: auto;
 	margin-left: auto;
 
-	//max-width: 960px;
 	
 	padding: 10px 10px 10px 10px;
 	background-color: black;
@@ -12,7 +15,7 @@ nav{
 	margin: 0 auto;
 
 	width: 95%;
-}	
+}
 
 .footer{
 	position: fixed;
@@ -44,3 +47,20 @@ button{
 	width: 100%;
 	padding: 3px 0px 3px 0px;
 }
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	background-color: green;
+}
+
+
+
+
+
+
+

@@ -9,6 +9,18 @@
 			<input type="password" name="pwd" placeholder="Contraseña">
 			<button type="submit" name="submit">Entrar</button>
 		</form>
+		
+		<?php
+		if(isset($_GET["error"])){
+			if($_GET["error"] == "emptyinput"){
+				echo "<p>Rellena todos los campos</p>";
+			}
+			else if($_GET["error"] == "wronglogin"){
+				echo "<p>El nombre de usuario o la contraseña son incorrectos</p>";
+			}
+		}
+		?>
+		
 	</section>
 
 <?php
