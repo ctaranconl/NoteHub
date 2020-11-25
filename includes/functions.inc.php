@@ -132,6 +132,7 @@ function login($conn, $username, $pwd){
 	else if($checkPwd === true){
 		session_start();
 		$_SESSION["userid"]=$usernameExists["userID"];
+		$_SESSION["username"]=$username;
 		header("location: ../index.php");
 		exit();
 	}

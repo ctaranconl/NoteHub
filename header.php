@@ -12,11 +12,15 @@
 		<link rel="stylesheet" href="css/styles.css" type="text/css">
     </head>
     <body>
+    	<div class = "logo">
+    		<img src=""/>
+    	</div>
     	<div class = "topnav">
 			<a class="active" href="index.php">NoteHub</a>
 			<?php
 				if(isset($_SESSION["userid"])){
-					echo "<a class='rightnav' href='profile.php'>Perfil</a>";
+					$username = $_SESSION["username"];
+					echo "<a class='rightnav active' style='color:#ff9191;' href='profile.php'>$username</a>";
 					echo "<a class='rightnav' href='logout.php'>Salir</a>";
 				}
 				else{
@@ -27,7 +31,7 @@
 			
 			
 		</div>
-		<div class = "usertopnav">
+		<!--div class = "usertopnav">
 			<a href="#">Perfil<a/>
 			<a href="#">Perfil<a/>
 			<a href="#">Perfil<a/>
@@ -36,6 +40,6 @@
 				<img class="profileicon" src="images/profileicon.svg">
 				<a/>
 			</div>
-		</div>
+		</div>-->
 	<div class="wrapper">
 
